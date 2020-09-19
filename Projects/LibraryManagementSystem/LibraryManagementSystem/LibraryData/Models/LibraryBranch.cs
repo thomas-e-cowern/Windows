@@ -5,7 +5,7 @@ using System.Text;
 
 namespace LibraryData.Models
 {
-    class LibraryBranch
+    public class LibraryBranch
     {
         public int Id { get; set; }
 

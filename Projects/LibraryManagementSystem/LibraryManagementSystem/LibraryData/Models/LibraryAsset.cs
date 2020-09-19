@@ -1,11 +1,12 @@
 ﻿using System;
 using System.Collections.Generic;
 using System.ComponentModel.DataAnnotations;
+using System.ComponentModel.DataAnnotations.Schema;
 using System.Text;
 
 namespace LibraryData.Models
 {
-    class LibraryAsset
+    public abstract class LibraryAsset
     {
         public int Id { get; set; }
 
@@ -15,6 +16,7 @@ namespace LibraryData.Models
 
         [Required]
         [Display(Name = "Cost of Replacement")]
+        [Column(TypeName = "decimal(18,4)")]
         public decimal Cost { get; set; }
         public string ImageUrl { get; set; }
         public int NumberOfCopies { get; set; }

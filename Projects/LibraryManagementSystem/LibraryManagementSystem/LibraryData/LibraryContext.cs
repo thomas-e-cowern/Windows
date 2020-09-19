@@ -3,13 +3,13 @@ using Microsoft.EntityFrameworkCore;
 
 namespace LibraryData
 {
-    public class LibraryDBContext : DbContext
+    public class LibraryContext : DbContext
     {
-        public LibraryDBContext()
+        public LibraryContext()
         {
         }
 
-        public LibraryDBContext(DbContextOptions options) : base(options)
+        public LibraryContext(DbContextOptions options) : base(options)
         {
         }
 

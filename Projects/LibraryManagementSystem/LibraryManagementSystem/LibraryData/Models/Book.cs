@@ -5,7 +5,7 @@ using System.Text;
 
 namespace LibraryData.Models
 {
-    class Book
+    public class Book : LibraryAsset
     {
         [Required] [Display(Name = "ISBN #")] public string ISBN { get; set; }
         [Required] public string Author { get; set; }

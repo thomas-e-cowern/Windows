@@ -27,7 +27,7 @@ namespace LibraryManagementSystem
         {
             services.AddControllersWithViews();
 
-            services.AddDbContext<LibraryDBContext>(options 
+            services.AddDbContext<LibraryContext>(options 
                 => options.UseSqlServer(Configuration.GetConnectionString("LibraryConnection")));
         }
 
