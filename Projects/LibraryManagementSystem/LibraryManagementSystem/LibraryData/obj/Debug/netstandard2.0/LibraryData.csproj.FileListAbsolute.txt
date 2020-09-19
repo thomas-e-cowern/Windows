@@ -1,0 +1,5 @@
+C:\Users\User\Documents\Windows\Projects\LibraryManagementSystem\LibraryManagementSystem\LibraryData\bin\Debug\netstandard2.0\LibraryData.deps.json
+C:\Users\User\Documents\Windows\Projects\LibraryManagementSystem\LibraryManagementSystem\LibraryData\bin\Debug\netstandard2.0\LibraryData.dll
+C:\Users\User\Documents\Windows\Projects\LibraryManagementSystem\LibraryManagementSystem\LibraryData\obj\Debug\netstandard2.0\LibraryData.csprojAssemblyReference.cache
+C:\Users\User\Documents\Windows\Projects\LibraryManagementSystem\LibraryManagementSystem\LibraryData\obj\Debug\netstandard2.0\LibraryData.AssemblyInfoInputs.cache
+C:\Users\User\Documents\Windows\Projects\LibraryManagementSystem\LibraryManagementSystem\LibraryData\obj\Debug\netstandard2.0\LibraryData.AssemblyInfo.cs
