@@ -39,5 +39,10 @@ namespace LibraryManagementSystem.Controllers
             };
              return View(model);
         }
+
+        public IActionResult Detail(int id)
+        {
+            var asset = _assets.GetById(id);
+        }
     }
 }
