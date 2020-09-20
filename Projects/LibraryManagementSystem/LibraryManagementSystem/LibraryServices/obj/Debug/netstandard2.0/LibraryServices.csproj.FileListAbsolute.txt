@@ -1,0 +1,12 @@
+C:\Users\User\Documents\Windows\Projects\LibraryManagementSystem\LibraryManagementSystem\LibraryServices\bin\Debug\netstandard2.0\LibraryServices.deps.json
+C:\Users\User\Documents\Windows\Projects\LibraryManagementSystem\LibraryManagementSystem\LibraryServices\bin\Debug\netstandard2.0\LibraryServices.dll
+C:\Users\User\Documents\Windows\Projects\LibraryManagementSystem\LibraryManagementSystem\LibraryServices\bin\Debug\netstandard2.0\LibraryServices.pdb
+C:\Users\User\Documents\Windows\Projects\LibraryManagementSystem\LibraryManagementSystem\LibraryServices\bin\Debug\netstandard2.0\LibraryData.dll
+C:\Users\User\Documents\Windows\Projects\LibraryManagementSystem\LibraryManagementSystem\LibraryServices\bin\Debug\netstandard2.0\LibraryData.pdb
+C:\Users\User\Documents\Windows\Projects\LibraryManagementSystem\LibraryManagementSystem\LibraryServices\obj\Debug\netstandard2.0\LibraryServices.csprojAssemblyReference.cache
+C:\Users\User\Documents\Windows\Projects\LibraryManagementSystem\LibraryManagementSystem\LibraryServices\obj\Debug\netstandard2.0\LibraryServices.AssemblyInfoInputs.cache
+C:\Users\User\Documents\Windows\Projects\LibraryManagementSystem\LibraryManagementSystem\LibraryServices\obj\Debug\netstandard2.0\LibraryServices.AssemblyInfo.cs
+C:\Users\User\Documents\Windows\Projects\LibraryManagementSystem\LibraryManagementSystem\LibraryServices\obj\Debug\netstandard2.0\LibraryServices.csproj.CoreCompileInputs.cache
+C:\Users\User\Documents\Windows\Projects\LibraryManagementSystem\LibraryManagementSystem\LibraryServices\obj\Debug\netstandard2.0\LibraryServices.csproj.CopyComplete
+C:\Users\User\Documents\Windows\Projects\LibraryManagementSystem\LibraryManagementSystem\LibraryServices\obj\Debug\netstandard2.0\LibraryServices.dll
+C:\Users\User\Documents\Windows\Projects\LibraryManagementSystem\LibraryManagementSystem\LibraryServices\obj\Debug\netstandard2.0\LibraryServices.pdb

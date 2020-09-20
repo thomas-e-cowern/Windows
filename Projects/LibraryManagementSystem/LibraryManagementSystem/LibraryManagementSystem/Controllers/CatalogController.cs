@@ -5,6 +5,7 @@ using System;
 using System.Collections.Generic;
 using System.Linq;
 using System.Threading.Tasks;
+using static Microsoft.EntityFrameworkCore.DbLoggerCategory;
 
 namespace LibraryManagementSystem.Controllers
 {
@@ -32,10 +33,10 @@ namespace LibraryManagementSystem.Controllers
                     Type = _assets.GetType(result.Id)
                 });
 
-             var model = new AssetIndexModel()
-             {
-                 Assets = listingResult
-             }
+            var model = new AssetIndexModel()
+            {
+                Assets = listingResult
+            };
              return View(model);
         }
     }
