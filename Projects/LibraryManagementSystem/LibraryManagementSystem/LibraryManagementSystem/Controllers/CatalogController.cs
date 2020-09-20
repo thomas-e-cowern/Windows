@@ -4,6 +4,7 @@ using Microsoft.AspNetCore.Mvc;
 using System;
 using System.Collections.Generic;
 using System.Linq;
+using System.Reflection;
 using System.Threading.Tasks;
 using static Microsoft.EntityFrameworkCore.DbLoggerCategory;
 
@@ -43,6 +44,22 @@ namespace LibraryManagementSystem.Controllers
         public IActionResult Detail(int id)
         {
             var asset = _assets.GetById(id);
+
+            var model = new AssetDetailModel
+            {
+                AssetId = id,
+                Title = asset.Title,
+                Year = asset.Year,
+                Cost = asset.Cost,
+                Status = asset.Status.Name,
+                ImageUrl = asset.ImageUrl,
+                AuthorOrDirector = _assets.GetAuthorOrDirector(id),
+                CurrentLocation = _assets.GetCurrentLocation(id).Name,
+                DeweyCallNumber = _assets.GetDeweyIndex(id),
+                ISBN = _assets.GetIsbn(id)
+            };
+
+            return View(model);
         }
     }
 }
