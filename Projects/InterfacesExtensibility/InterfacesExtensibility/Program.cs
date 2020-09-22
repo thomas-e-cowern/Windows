@@ -1,4 +1,6 @@
 ﻿using System;
+using System.Runtime.InteropServices;
+
 namespace InterfacesExtensibility
 {
     public class ConsoleLogger : ILogger
@@ -13,11 +15,18 @@ namespace InterfacesExtensibility
             Console.ForegroundColor = ConsoleColor.Green;
             Console.WriteLine(message);
         }
+
+        void ILogger.LogUser(string message)
+        {
+            Console.ForegroundColor = ConsoleColor.Blue;
+            Console.WriteLine(message);
+        }
     }
     public interface ILogger
     {
         void LogError(string message);  // method
         void LogInfo(string message);  // method
+        void LogUser(string message);  // My added method
     }
     public class DbMigrator
     {
@@ -26,10 +35,11 @@ namespace InterfacesExtensibility
         {
             _logger = logger;
         }
-        public void Migrate()
+        public void Migrate(string userMessage)
         {
             _logger.LogInfo($"Migrating started at {DateTime.Now}");
             _logger.LogInfo($"Migrating ended at {DateTime.Now}");
+            _logger.LogUser(userMessage);
         }
     }
 
@@ -48,6 +58,10 @@ namespace InterfacesExtensibility
         {
             Log(message, "INFO");
         }
+        public void LogUser(string message)
+        {
+            Log(message, "USER");
+        }
         private void Log(string message, string messageType)
         {
             using (var streamWriter = new System.IO.StreamWriter(_path, true))
@@ -61,11 +75,14 @@ namespace InterfacesExtensibility
     {
         static void Main(string[] args)
         {
+            Console.WriteLine("Please enter a comment for the file...");
+            string myText = Console.ReadLine();
+
             var dbMigrator = new DbMigrator(new ConsoleLogger());
-            dbMigrator.Migrate();
+            dbMigrator.Migrate(myText);
 
             var dbMigrator2 = new DbMigrator(new FileLogger("log.txt"));
-            dbMigrator2.Migrate();
+            dbMigrator2.Migrate(myText);
 
             Console.WriteLine("\npress any key to exit...");
             Console.ReadKey();
