@@ -1,0 +1,7 @@
+C:\Users\User\Documents\Windows\Projects\InterfacesExtensibility\InterfacesExtensibility\bin\Debug\InterfacesExtensibility.exe.config
+C:\Users\User\Documents\Windows\Projects\InterfacesExtensibility\InterfacesExtensibility\bin\Debug\InterfacesExtensibility.exe
+C:\Users\User\Documents\Windows\Projects\InterfacesExtensibility\InterfacesExtensibility\bin\Debug\InterfacesExtensibility.pdb
+C:\Users\User\Documents\Windows\Projects\InterfacesExtensibility\InterfacesExtensibility\obj\Debug\InterfacesExtensibility.csprojAssemblyReference.cache
+C:\Users\User\Documents\Windows\Projects\InterfacesExtensibility\InterfacesExtensibility\obj\Debug\InterfacesExtensibility.csproj.CoreCompileInputs.cache
+C:\Users\User\Documents\Windows\Projects\InterfacesExtensibility\InterfacesExtensibility\obj\Debug\InterfacesExtensibility.exe
+C:\Users\User\Documents\Windows\Projects\InterfacesExtensibility\InterfacesExtensibility\obj\Debug\InterfacesExtensibility.pdb
