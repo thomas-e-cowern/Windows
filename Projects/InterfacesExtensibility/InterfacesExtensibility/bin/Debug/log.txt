@@ -3,3 +3,6 @@ INFO: Migrating ended at 9/22/2020 11:30:45 AM
 INFO: Migrating started at 9/22/2020 1:58:12 PM
 INFO: Migrating ended at 9/22/2020 1:58:12 PM
 USER: This is my first user comment
+INFO: Migrating started at 9/22/2020 2:09:26 PM
+INFO: Migrating ended at 9/22/2020 2:09:26 PM
+USER: Ok, here's my second comment for this shitty file...
