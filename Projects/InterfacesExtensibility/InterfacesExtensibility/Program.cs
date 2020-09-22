@@ -64,6 +64,9 @@ namespace InterfacesExtensibility
             var dbMigrator = new DbMigrator(new ConsoleLogger());
             dbMigrator.Migrate();
 
+            var dbMigrator2 = new DbMigrator(new FileLogger("log.txt"));
+            dbMigrator2.Migrate();
+
             Console.WriteLine("\npress any key to exit...");
             Console.ReadKey();
         }
