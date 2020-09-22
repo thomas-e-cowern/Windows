@@ -1,0 +1,7 @@
+C:\Users\User\Documents\Windows\Projects\InterfaceTest\InterfaceTest\bin\Debug\InterfaceTest.exe.config
+C:\Users\User\Documents\Windows\Projects\InterfaceTest\InterfaceTest\bin\Debug\InterfaceTest.exe
+C:\Users\User\Documents\Windows\Projects\InterfaceTest\InterfaceTest\bin\Debug\InterfaceTest.pdb
+C:\Users\User\Documents\Windows\Projects\InterfaceTest\InterfaceTest\obj\Debug\InterfaceTest.csprojAssemblyReference.cache
+C:\Users\User\Documents\Windows\Projects\InterfaceTest\InterfaceTest\obj\Debug\InterfaceTest.csproj.CoreCompileInputs.cache
+C:\Users\User\Documents\Windows\Projects\InterfaceTest\InterfaceTest\obj\Debug\InterfaceTest.exe
+C:\Users\User\Documents\Windows\Projects\InterfaceTest\InterfaceTest\obj\Debug\InterfaceTest.pdb
