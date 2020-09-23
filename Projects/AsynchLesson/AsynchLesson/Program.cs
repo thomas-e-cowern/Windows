@@ -10,7 +10,7 @@ namespace AsynchLesson
     {
         static async Task Main(string[] args)
         {
-            Coffee cup = PourCoffee();
+            /*Coffee cup = PourCoffee();
             Console.WriteLine("coffee is ready");
 
             Task<Egg> eggsTask = FryEggsAsync(2);
@@ -26,18 +26,18 @@ namespace AsynchLesson
             Toast toast = await toastTask;
             ApplyButter(toast);
             ApplyJam(toast);
-            Console.WriteLine("toast is ready");
-
-           /* Egg eggs = await FryEggsAsync(2);
-            Console.WriteLine("eggs are ready");
-
-            Bacon bacon = await FryBaconAsync(3);
-            Console.WriteLine("bacon is ready");
-
-            Toast toast = await ToastBreadAsync(2);
-            ApplyButter(toast);
-            ApplyJam(toast);
             Console.WriteLine("toast is ready");*/
+
+            /* Egg eggs = await FryEggsAsync(2);
+             Console.WriteLine("eggs are ready");
+
+             Bacon bacon = await FryBaconAsync(3);
+             Console.WriteLine("bacon is ready");
+
+             Toast toast = await ToastBreadAsync(2);
+             ApplyButter(toast);
+             ApplyJam(toast);
+             Console.WriteLine("toast is ready");*/
 
             /*Egg eggs = FryEggs(2);
             Console.WriteLine("eggs are ready");
@@ -50,13 +50,28 @@ namespace AsynchLesson
             ApplyJam(toast);
             Console.WriteLine("toast is ready");*/
 
-            Juice oj = PourOJ();
-            Console.WriteLine("oj is ready");
-            Console.WriteLine("Breakfast is ready!");
+            /* Juice oj = PourOJ();
+             Console.WriteLine("oj is ready");
+             Console.WriteLine("Breakfast is ready!");*/
 
+            Task SignOnTest = CheckSignOnAsyc(name: "tcowern", password: "********");
+            Console.WriteLine("Loading some other shit....");
+
+            Console.WriteLine("");
+            Console.ReadKey();
+
+        }
+
+        private static async Task<SignOnTest> CheckSignOnAsyc(string name, string password)
+        {
+            Console.WriteLine("Checking your logon credentials...");
+            await Task.Delay(3000);
+            Console.WriteLine("You are logged in...");
             Console.WriteLine("\npress any key to continue...");
             Console.ReadKey();
+            return new SignOnTest();
         }
+
         private static Juice PourOJ()
         {
             Console.WriteLine("Pouring orange juice");
@@ -156,6 +171,8 @@ namespace AsynchLesson
             Console.WriteLine("Pouring coffee");
             return new Coffee();
         }
+
+        class SignOnTest { }
         class Coffee { }
         class Juice { }
         class Bacon { }
