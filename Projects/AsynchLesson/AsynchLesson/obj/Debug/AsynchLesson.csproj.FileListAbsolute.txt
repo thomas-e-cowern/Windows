@@ -1,0 +1,7 @@
+C:\Users\User\Documents\Windows\Projects\AsynchLesson\AsynchLesson\bin\Debug\AsynchLesson.exe.config
+C:\Users\User\Documents\Windows\Projects\AsynchLesson\AsynchLesson\bin\Debug\AsynchLesson.exe
+C:\Users\User\Documents\Windows\Projects\AsynchLesson\AsynchLesson\bin\Debug\AsynchLesson.pdb
+C:\Users\User\Documents\Windows\Projects\AsynchLesson\AsynchLesson\obj\Debug\AsynchLesson.csprojAssemblyReference.cache
+C:\Users\User\Documents\Windows\Projects\AsynchLesson\AsynchLesson\obj\Debug\AsynchLesson.csproj.CoreCompileInputs.cache
+C:\Users\User\Documents\Windows\Projects\AsynchLesson\AsynchLesson\obj\Debug\AsynchLesson.exe
+C:\Users\User\Documents\Windows\Projects\AsynchLesson\AsynchLesson\obj\Debug\AsynchLesson.pdb
