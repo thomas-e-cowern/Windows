@@ -1,0 +1,7 @@
+C:\Users\User\Documents\Windows\Projects\EventsDelegatesLambdas\EventsDelegatesLambdas\bin\Debug\EventsDelegatesLambdas.exe.config
+C:\Users\User\Documents\Windows\Projects\EventsDelegatesLambdas\EventsDelegatesLambdas\bin\Debug\EventsDelegatesLambdas.exe
+C:\Users\User\Documents\Windows\Projects\EventsDelegatesLambdas\EventsDelegatesLambdas\bin\Debug\EventsDelegatesLambdas.pdb
+C:\Users\User\Documents\Windows\Projects\EventsDelegatesLambdas\EventsDelegatesLambdas\obj\Debug\EventsDelegatesLambdas.csprojAssemblyReference.cache
+C:\Users\User\Documents\Windows\Projects\EventsDelegatesLambdas\EventsDelegatesLambdas\obj\Debug\EventsDelegatesLambdas.csproj.CoreCompileInputs.cache
+C:\Users\User\Documents\Windows\Projects\EventsDelegatesLambdas\EventsDelegatesLambdas\obj\Debug\EventsDelegatesLambdas.exe
+C:\Users\User\Documents\Windows\Projects\EventsDelegatesLambdas\EventsDelegatesLambdas\obj\Debug\EventsDelegatesLambdas.pdb
