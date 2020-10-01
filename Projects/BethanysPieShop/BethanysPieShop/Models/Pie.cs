@@ -1,12 +1,18 @@
-﻿using System;
+﻿using Microsoft.AspNetCore.Mvc;
 using System.Collections.Generic;
-using System.ComponentModel;
-using System.Linq;
-using System.Security.Policy;
-using System.Threading.Tasks;
 
 namespace BethanysPieShop.Models
 {
+
+    public class PieController : Controller
+    {
+        public ViewResult Index()
+        {
+            return View();
+        }
+
+    }
+
     public interface ICategoryRepository
     {
         IEnumerable<Category> AllCategories { get; }
