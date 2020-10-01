@@ -6,11 +6,17 @@ namespace BethanysPieShop.Models
 
     public class PieController : Controller
     {
-        public ViewResult Index()
+        private readonly IPieRepository _pieRepository;
+
+        public PieController(IPieRepository pieRepository)
         {
-            return View();
+            _pieRepository = pieRepository;
         }
 
+        public ViewResult List()
+        {
+            return View(_pieRepository.Pies);
+        }
     }
 
     public interface ICategoryRepository
