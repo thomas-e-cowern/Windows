@@ -10,6 +10,10 @@
       5,
       5,
       5,
+      4,
+      3,
+      4,
+      3,
       4
     ]
   },
@@ -65,7 +69,9 @@
     "Url": "https://twitter.com/sailorhg/status/1090122822007963648",
     "Title": "Pastel hardware kit",
     "Description": "Pastel hardware kits complete with custom manufactured pastel alligator clips.",
-    "Ratings": null
+    "Ratings": [
+      2
+    ]
   },
   {
     "Id": "sailorhg-led",
@@ -74,7 +80,9 @@
     "Url": "https://twitter.com/sailorhg/status/1090117277540745216",
     "Title": "Heart-shaped LED",
     "Description": "custom molded heart shaped LED with sprinkles.",
-    "Ratings": null
+    "Ratings": [
+      3
+    ]
   },
   {
     "Id": "selinazawacki-soi-shirt",
@@ -92,7 +100,9 @@
     "Url": "https://www.instagram.com/p/BNm6hZzDoEF/",
     "Title": "Sick of the Internet Pins",
     "Description": "Still some time to enter the pin/sticker giveaway! ",
-    "Ratings": null
+    "Ratings": [
+      3
+    ]
   },
   {
     "Id": "vogueandcode-hipster-dev-bro",
