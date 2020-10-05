@@ -25,5 +25,13 @@ namespace TestCrafts.Controllers
         {
             return ProductService.GetProducts();
         }
+
+        [Route("Rate")]
+        [HttpGet]
+        public ActionResult Get([FromQuery] string ProductId, int Rating)
+        {
+            ProductService.AddRating(ProductId, Rating);
+            return Ok();
+        }
     }
 }
