@@ -35,3 +35,7 @@ C:\Users\User\Documents\Windows\Projects\TestCrafts\TestCrafts\obj\Debug\netcore
 C:\Users\User\Documents\Windows\Projects\TestCrafts\TestCrafts\obj\Debug\netcoreapp3.1\TestCrafts.pdb
 C:\Users\User\Documents\Windows\Projects\TestCrafts\TestCrafts\obj\Debug\netcoreapp3.1\TestCrafts.genruntimeconfig.cache
 C:\Users\User\Documents\Windows\Projects\TestCrafts\TestCrafts\obj\Debug\netcoreapp3.1\TestCrafts.csproj.CopyComplete
+C:\Users\User\Documents\Windows\Projects\TestCrafts\TestCrafts\obj\Debug\netcoreapp3.1\TestCrafts.RazorComponent.input.cache
+C:\Users\User\Documents\Windows\Projects\TestCrafts\TestCrafts\obj\Debug\netcoreapp3.1\RazorDeclaration\Components\ProductList.razor.g.cs
+C:\Users\User\Documents\Windows\Projects\TestCrafts\TestCrafts\obj\Debug\netcoreapp3.1\RazorDeclaration\TestCrafts.dll
+C:\Users\User\Documents\Windows\Projects\TestCrafts\TestCrafts\obj\Debug\netcoreapp3.1\Razor\Components\ProductList.razor.g.cs
