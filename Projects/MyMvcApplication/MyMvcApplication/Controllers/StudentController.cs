@@ -25,6 +25,26 @@ namespace MyMvcApplication.Controllers
             return View(studentList.OrderBy(s => s.StudentId).ToList());
         }
 
+        public ActionResult Create(string Name, int Age)
+        {
+            return View();
+        }
+
+        [HttpPost]
+        public ActionResult Create(Student std)
+        {
+            Student newStd = new Student
+            {
+                StudentName = Name,
+                Age = Age
+            };
+            studentList.Add(newStd);
+
+            studentList.Add(std);
+
+            return RedirectToAction("Index");
+        }
+
         public ActionResult Edit(int Id)
         {
             var std = studentList.Where(s => s.StudentId == Id).FirstOrDefault();
