@@ -1,3 +1,4 @@
 # ignore packes folder in MyMvcApplication
 
 \Projects\MyMvcApplication\packages
+\Projects\TestCrafts\.vs
