@@ -7,81 +7,21 @@ using Microsoft.AspNetCore.Mvc;
 
 namespace CoreCodeCamp.Controllers
 {
-    public class CampsController : Controller
+    [Route("api/[controller]")]
+    public class CampsController : ControllerBase
     {
-        // GET: CampsController
-        public ActionResult Index()
+        
+/*        public object Get()
         {
-            return View();
+            return new { Moniker="ATL2014", Name="Atlanta Code Camp" };
+        }*/
+
+        [HttpGet]
+        public IActionResult GetCamps()
+        {
+            return Ok(new { Moniker = "ATL2018", Name = "Atlanta Code Camp" });
         }
 
-        // GET: CampsController/Details/5
-        public ActionResult Details(int id)
-        {
-            return View();
-        }
-
-        // GET: CampsController/Create
-        public ActionResult Create()
-        {
-            return View();
-        }
-
-        // POST: CampsController/Create
-        [HttpPost]
-        [ValidateAntiForgeryToken]
-        public ActionResult Create(IFormCollection collection)
-        {
-            try
-            {
-                return RedirectToAction(nameof(Index));
-            }
-            catch
-            {
-                return View();
-            }
-        }
-
-        // GET: CampsController/Edit/5
-        public ActionResult Edit(int id)
-        {
-            return View();
-        }
-
-        // POST: CampsController/Edit/5
-        [HttpPost]
-        [ValidateAntiForgeryToken]
-        public ActionResult Edit(int id, IFormCollection collection)
-        {
-            try
-            {
-                return RedirectToAction(nameof(Index));
-            }
-            catch
-            {
-                return View();
-            }
-        }
-
-        // GET: CampsController/Delete/5
-        public ActionResult Delete(int id)
-        {
-            return View();
-        }
-
-        // POST: CampsController/Delete/5
-        [HttpPost]
-        [ValidateAntiForgeryToken]
-        public ActionResult Delete(int id, IFormCollection collection)
-        {
-            try
-            {
-                return RedirectToAction(nameof(Index));
-            }
-            catch
-            {
-                return View();
-            }
-        }
+   
     }
 }
