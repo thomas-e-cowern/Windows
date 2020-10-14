@@ -4,7 +4,7 @@ using Microsoft.AspNetCore.Mvc;
 using System.Linq;
 using System.Threading.Tasks;
 
-namespace TestAppAuthAndAuthorize.Controllers
+namespace TheBookList.Controllers
 {
     public class RoleController : Controller
     {
