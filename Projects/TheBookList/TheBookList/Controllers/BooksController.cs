@@ -30,11 +30,11 @@ namespace TheBookList.Controllers
         public async Task<IActionResult> Index()
         {
             // var user = await _userManager.FindByIdAsync(User.Identity.ToString());
-            var userId = _userManager.GetUserId(User);
+            var UserId = _userManager.GetUserId(User);
 
-            Book = _context.Books.Find(_userManager.GetUserId(User));
-            // return View(await _context.Books.ToListAsync());
-            return View(Book);
+            // Book = _context.Books.Find(_userManager.GetUserId(User));
+            return View(await _context.Books.ToListAsync());
+            // return View(Book);
         }
 
         // GET: Books/Details/5
@@ -66,7 +66,7 @@ namespace TheBookList.Controllers
         // more details, see http://go.microsoft.com/fwlink/?LinkId=317598.
         [HttpPost]
         [ValidateAntiForgeryToken]
-        public async Task<IActionResult> Create([Bind("Id,Title,Author,Start,End,Finished")] Book book)
+        public async Task<IActionResult> Create([Bind("Id,Title,Author,Start,End,Finished,UserId")] Book book)
         {
             if (ModelState.IsValid)
             {
