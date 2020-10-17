@@ -6,6 +6,7 @@ using Microsoft.AspNetCore.Http;
 using Microsoft.AspNetCore.Mvc;
 using Microsoft.EntityFrameworkCore;
 using BookStoreWedApi.Model;
+using System.Security.Permissions;
 
 namespace BookStoreWedApi.Controllers
 {
@@ -28,11 +29,71 @@ namespace BookStoreWedApi.Controllers
         }
 
         // GET: api/Publishers/5
+        [HttpGet("PostPublisherDetails")]
+        public async Task<ActionResult<Publisher>> PostPublisherDetails()
+        {
+            var publisher = new Publisher();
+            publisher.PublisherName = "Bonhomie Press";
+            publisher.City = "New York";
+            publisher.State = "NY";
+            publisher.Country = "USA";
+
+            Book book1 = new Book();
+            book1.Title = "This is the new book title";
+            book1.PublishedDate = DateTime.UtcNow;
+
+            Book book2 = new Book();
+            book2.Title = "This is the second book title";
+            book2.PublishedDate = DateTime.UtcNow;
+
+            Sale sale1 = new Sale();
+            sale1.Quantity = 2;
+            sale1.StoreId = "8042";
+            sale1.OrderNum = "XYZ";
+            sale1.PayTerms = "Net 30";
+            sale1.OrderDate = DateTime.Now;
+
+            Sale sale2 = new Sale();
+            sale2.Quantity = 2;
+            sale2.StoreId = "7131";
+            sale2.OrderNum = "QA879.1";
+            sale2.PayTerms = "Net 20";
+            sale2.OrderDate = DateTime.Now;
+
+            book1.Sale.Add(sale1);
+            book2.Sale.Add(sale2);
+
+            publisher.Book.Add(book1);
+            publisher.Book.Add(book2);
+
+            _context.Publisher.Add(publisher);
+            _context.SaveChanges();
+
+            var publishers = _context.Publisher
+                                .Include(pub => pub.Book)
+                                    .ThenInclude(book => book.Sale)
+                                .Include(pub => pub.User)
+                                    .ThenInclude(user => user.Role)
+                                .Where(pub => pub.PubId == publisher.PubId)
+                                .FirstOrDefault();
+
+            if (publisher == null)
+            {
+                return NotFound();
+            }
+
+            return publisher;
+        }
+
+        // GET: api/Publishers/5
         [HttpGet("GetPublisherDetails/{id}")]
         public async Task<ActionResult<Publisher>> GetPublisherDetails(int id)
         {
             var publisher = _context.Publisher
                                 .Include(pub => pub.Book)
+                                    .ThenInclude(book => book.Sale)
+                                .Include(pub => pub.User)
+                                    .ThenInclude(user => user.Role)
                                 .Where(pub => pub.PubId == id)
                                 .FirstOrDefault();
 
