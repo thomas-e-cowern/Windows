@@ -31,7 +31,7 @@ namespace BookStoreWedApi.Model
             if (!optionsBuilder.IsConfigured)
             {
 
-                optionsBuilder.UseSqlServer("Name=DefaultConnection");
+                optionsBuilder.UseSqlServer("name=DefaultConnection");
             }
         }
 
