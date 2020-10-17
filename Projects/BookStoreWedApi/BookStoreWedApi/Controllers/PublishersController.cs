@@ -28,6 +28,23 @@ namespace BookStoreWedApi.Controllers
         }
 
         // GET: api/Publishers/5
+        [HttpGet("GetPublisherDetails/{id}")]
+        public async Task<ActionResult<Publisher>> GetPublisherDetails(int id)
+        {
+            var publisher = _context.Publisher
+                                .Include(pub => pub.Book)
+                                .Where(pub => pub.PubId == id)
+                                .FirstOrDefault();
+
+            if (publisher == null)
+            {
+                return NotFound();
+            }
+
+            return publisher;
+        }
+
+        // GET: api/Publishers/5
         [HttpGet("{id}")]
         public async Task<ActionResult<Publisher>> GetPublisher(int id)
         {
