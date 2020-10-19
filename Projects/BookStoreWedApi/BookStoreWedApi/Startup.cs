@@ -15,6 +15,8 @@ using Microsoft.Extensions.Hosting;
 using Microsoft.Extensions.Logging;
 using Microsoft.AspNetCore.Mvc.NewtonsoftJson;
 using Newtonsoft.Json;
+using Microsoft.AspNetCore.Authentication;
+using BookStoreWedApi.Handlers;
 
 namespace BookStoreWedApi
 {
@@ -35,6 +37,9 @@ namespace BookStoreWedApi
             services.AddMvc(option => option.EnableEndpointRouting = false)
                 .SetCompatibilityVersion(CompatibilityVersion.Version_3_0)
                 .AddNewtonsoftJson(opt => opt.SerializerSettings.ReferenceLoopHandling = ReferenceLoopHandling.Ignore);
+
+            services.AddAuthentication("BasicAuthentication")
+                .AddScheme<AuthenticationSchemeOptions, BasicAuthenticationHandler>("BasicAuthentication", null);
 
             services.AddDbContext<BookStoresDBContext>(options =>
                     options.UseSqlServer(Configuration.GetConnectionString("DefaultConnection")));
