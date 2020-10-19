@@ -7,6 +7,7 @@ using Microsoft.AspNetCore.Mvc;
 using Microsoft.EntityFrameworkCore;
 using BookStoreWedApi.Model;
 using System.Security.Permissions;
+using Microsoft.AspNetCore.Identity;
 
 namespace BookStoreWedApi.Controllers
 {
@@ -89,13 +90,48 @@ namespace BookStoreWedApi.Controllers
         [HttpGet("GetPublisherDetails/{id}")]
         public async Task<ActionResult<Publisher>> GetPublisherDetails(int id)
         {
-            var publisher = _context.Publisher
+            // Eager loading
+            /*var publisher = _context.Publisher
                                 .Include(pub => pub.Book)
                                     .ThenInclude(book => book.Sale)
                                 .Include(pub => pub.User)
                                     .ThenInclude(user => user.Role)
                                 .Where(pub => pub.PubId == id)
                                 .FirstOrDefault();
+            */
+
+            // Excplicit loading
+            var publisher = await _context.Publisher.SingleAsync(pub => pub.PubId == id);
+
+            // getting publisher users
+            /*_context.Entry(publisher)
+                .Collection(pub => pub.User)
+                .Load();*/
+
+            // getting a particular user
+            _context.Entry(publisher)
+                .Collection(pub => pub.User)
+                .Query()
+                .Where(usr => usr.EmailAddress.Contains("Karin"))
+                .Load();
+
+            // Getting books
+            /* _context.Entry(publisher)
+                 .Collection(pub => pub.Book)
+                 .Load();*/
+
+            // Getting books and sales
+            _context.Entry(publisher)
+                .Collection(pub => pub.Book)
+                .Query()
+                .Include(book => book.Sale)
+                .Load();
+
+            var user = await _context.User.SingleAsync(usr => usr.UserId == 1);
+
+            _context.Entry(user)
+                .Reference(usr => usr.Role)
+                .Load();
 
             if (publisher == null)
             {
