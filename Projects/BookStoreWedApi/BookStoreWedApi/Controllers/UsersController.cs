@@ -7,6 +7,7 @@ using Microsoft.AspNetCore.Mvc;
 using Microsoft.EntityFrameworkCore;
 using BookStoreWedApi.Model;
 using Microsoft.AspNetCore.Authorization;
+using Newtonsoft.Json.Schema;
 
 namespace BookStoreWedApi.Controllers
 {
@@ -23,10 +24,18 @@ namespace BookStoreWedApi.Controllers
         }
 
         // GET: api/Users
-        [HttpGet]
-        public async Task<ActionResult<IEnumerable<User>>> GetUser()
+        [HttpGet("GetUser")]
+        public async Task<ActionResult<User>> GetUser()
         {
-            return await _context.User.ToListAsync();
+
+            string emailAddress = HttpContext.User.Identity.Name;
+
+            var user = await _context.User
+                            .Where(usr => usr.EmailAddress == emailAddress)
+                            .FirstOrDefaultAsync();
+            user.Password = null;
+
+            return user;
         }
 
         // GET: api/Users/5
