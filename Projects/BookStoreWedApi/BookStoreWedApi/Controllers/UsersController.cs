@@ -8,6 +8,8 @@ using Microsoft.EntityFrameworkCore;
 using BookStoreWedApi.Model;
 using Microsoft.AspNetCore.Authorization;
 using Newtonsoft.Json.Schema;
+using Microsoft.Extensions.Configuration.UserSecrets;
+using System.ComponentModel.DataAnnotations;
 
 namespace BookStoreWedApi.Controllers
 {
@@ -22,6 +24,26 @@ namespace BookStoreWedApi.Controllers
         {
             _context = context;
         }
+
+        [HttpGet("Login")]
+
+        public async Task<ActionResult<UserWithToken>> Login([FromBody, UserSecretsId user)
+        {
+            user = await _context.User
+                    .Include(u => u.Role)
+                    .Where(u => u.EmailAddress == user.EmailAddress && u.Password == user.Password)
+                    .firstOrDefaultAsync();
+
+            UserWithToken userWithToken = new UserWithToken(user);
+
+            if (userWithToken == null)
+            {
+                return NotFound();
+            }
+
+            return userWithToken;
+        }
+
 
         // GET: api/Users
         [HttpGet("GetUser")]
