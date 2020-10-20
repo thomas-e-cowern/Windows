@@ -8,9 +8,11 @@ using Microsoft.EntityFrameworkCore;
 using BookStoreWedApi.Model;
 using System.Security.Permissions;
 using Microsoft.AspNetCore.Identity;
+using Microsoft.AspNetCore.Authorization;
 
 namespace BookStoreWedApi.Controllers
 {
+    [Authorize]
     [Route("api/[controller]")]
     [ApiController]
     public class PublishersController : ControllerBase
