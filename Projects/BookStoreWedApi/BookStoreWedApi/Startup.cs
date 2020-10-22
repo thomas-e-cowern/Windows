@@ -76,7 +76,7 @@ namespace BookStoreWedApi
 
             services.AddSwaggerGen(gen =>
             {
-                gen.SwaggerDoc("V 1.0", new Microsoft.OpenApi.Models.OpenApiInfo { Title = "BookStoresAPI", Version = "v1.0" });
+                gen.SwaggerDoc("v1.0", new Microsoft.OpenApi.Models.OpenApiInfo { Title = "BookStoresAPI", Version = "v1.0" });
             });
         }
 
@@ -97,6 +97,11 @@ namespace BookStoreWedApi
             app.UseAuthorization();
 
             app.UseSwagger();
+
+            app.UseSwaggerUI(ui =>
+            {
+                ui.SwaggerEndpoint("/swagger/v1.0/swagger.json", "Bookstores API Endpoint");
+            });
 
             app.UseEndpoints(endpoints =>
             {
