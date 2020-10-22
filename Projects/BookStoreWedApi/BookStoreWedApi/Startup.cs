@@ -73,6 +73,11 @@ namespace BookStoreWedApi
                     ClockSkew = TimeSpan.Zero
                 };
             });
+
+            services.AddSwaggerGen(gen =>
+            {
+                gen.SwaggerDoc("V 1.0", new Microsoft.OpenApi.Models.OpenApiInfo { Title = "BookStoresAPI", Version = "v1.0" });
+            });
         }
 
         // This method gets called by the runtime. Use this method to configure the HTTP request pipeline.
@@ -90,6 +95,8 @@ namespace BookStoreWedApi
             app.UseAuthentication();
 
             app.UseAuthorization();
+
+            app.UseSwagger();
 
             app.UseEndpoints(endpoints =>
             {
